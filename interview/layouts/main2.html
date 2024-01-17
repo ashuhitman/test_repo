@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Harry Potter</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "roboto";
+      }
+
+      @media only screen and (min-width: 786px) {
+        .container {
+          display: grid;
+          grid-template-columns: repeat(5, 1fr);
+
+          grid-template-areas:
+            "header header header header header"
+            "aside main main main section"
+            "aside main main main section"
+            "footer footer footer footer footer";
+        }
+      }
+
+      .container > * {
+        border: 1px solid rgb(244, 238, 238);
+      }
+      header {
+        grid-area: header;
+        text-align: center;
+        padding: 15px 0;
+      }
+      aside {
+        grid-area: aside;
+        padding: 1rem;
+      }
+      main {
+        grid-area: main;
+
+        padding: 1rem;
+      }
+      section {
+        grid-area: section;
+        padding: 1rem;
+      }
+      section li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      section img {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        border: 2px solid gray;
+        cursor: pointer;
+        object-fit: cover;
+      }
+      footer {
+        grid-area: footer;
+        padding: 5px 0;
+        text-align: center;
+        font-size: 0.8rem;
+      }
+      figure {
+        width: 100%;
+        margin: 20px auto;
+      }
+      figure img {
+        width: 100%;
+      }
+      ul {
+        list-style: none;
+        margin-top: 20px;
+      }
+      ol {
+        margin: 20px;
+      }
+      li {
+        margin: 8px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header><h2>Harry Potter Movie Series</h2></header>
+
+      <main>
+        <h1>The Best Fantasy Film</h1>
+        <figure>
+          <img
+            src="https://preview.redd.it/what-was-your-favorite-movie-from-the-franchise-v0-xo5rbiy2lv2c1.jpeg?width=1080&crop=smart&auto=webp&s=ed7c7ea4f9f5b2d79593188b17b0738c51445422"
+          />
+        </figure>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente,
+          voluptatum vel? Voluptates, id a. Odio autem velit architecto ullam,
+          quaerat placeat minima debitis sed excepturi reiciendis dolorum
+          eligendi repudiandae rem reprehenderit? Sint facilis molestias
+          perferendis aliquam architecto quisquam veritatis eius id vero
+          dignissimos? Nihil nostrum quas doloremque veniam, neque vero ea
+          tenetur quis delectus nesciunt, maiores distinctio temporibus
+          blanditiis tempora sit? Excepturi deleniti reprehenderit blanditiis,
+          magnam veniam minima ratione numquam reiciendis omnis est placeat
+          magni iusto repellat corrupti. Ad, recusandae. Soluta reiciendis
+          officia sed reprehenderit voluptas laboriosam officiis ab, consequatur
+          ut distinctio ipsam temporibus consectetur deleniti ullam laudantium
+          excepturi quas.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga vero
+          saepe dolores et cum deserunt quas. Ab molestias provident ipsum
+          consequatur aliquam quo quas, earum officiis, doloribus dolor qui odio
+          assumenda! Numquam unde odio, impedit officia ducimus quas atque iste
+          blanditiis doloribus, laboriosam doloremque voluptate aperiam,
+          voluptates saepe eum quia.
+        </p>
+      </main>
+      <aside>
+        <h3>All Harry Potter Movies</h3>
+        <ol>
+          <li>Harry Potter and Philospher's Stone</li>
+          <li>Harry Potter and the Chamber of Secrets</li>
+          <li>Harry Potter and the Prisoner of Azkaban</li>
+          <li>Harry Potter and the Goblet of Fire</li>
+          <li>Harry Potter and the Order of the Phoenix</li>
+          <li>Harry Potter and the Half-Blood Prince</li>
+          <li>Harry Potter and the Deathly Hallows – Part 1</li>
+          <li>Harry Potter and the Deathly Hallows – Part 2</li>
+        </ol>
+      </aside>
+      <section>
+        <h3>Marvel Movies</h3>
+        <ul>
+          <li>
+            <img
+              src="https://www.shutterstock.com/shutterstock/photos/2275221867/display_1500/stock-vector-ironman-art-design-vector-icon-template-body-metal-weapon-mask-armour-special-gun-power-army-2275221867.jpg"
+            />
+            <p>Iron Man</p>
+          </li>
+          <li>
+            <img
+              src="https://i.pinimg.com/564x/c7/69/99/c76999ab010a4491754e9c8d4b366048.jpg"
+            />
+            <p>Captain America</p>
+          </li>
+          <li>
+            <img
+              src="https://i.pinimg.com/564x/28/03/14/280314178845406a1dfbfc87a9429f67.jpg"
+            />
+            <p>
+              Captain America<br />
+              & Winter Soldiers
+            </p>
+          </li>
+          <li>
+            <img
+              src="https://i.pinimg.com/564x/03/ad/7d/03ad7d7050ba7b353e4ce86493287f46.jpg"
+            />
+            <p>Guardians of Galaxy</p>
+          </li>
+          <li>
+            <img
+              src="https://i.pinimg.com/564x/86/2f/b9/862fb93cff9e2323b881e522fb16c7fe.jpg"
+            />
+            <p>Thor</p>
+          </li>
+          <li>
+            <img
+              src="https://www.shutterstock.com/shutterstock/photos/2275221867/display_1500/stock-vector-ironman-art-design-vector-icon-template-body-metal-weapon-mask-armour-special-gun-power-army-2275221867.jpg"
+            />
+            <p>Avengers</p>
+          </li>
+        </ul>
+      </section>
+      <footer>Copyrights @2024 designed by Ashutosh Singh</footer>
+    </div>
+  </body>
+</html>

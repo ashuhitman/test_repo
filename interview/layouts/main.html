@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid-Layout</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        height: 100dvh;
+        color: white;
+        display: grid;
+        gap: 8px;
+        padding: 8px;
+      }
+      .container > * {
+        background-color: rgb(53, 172, 212);
+        text-align: center;
+      }
+      header {
+        grid-column: 1/6;
+      }
+      nav {
+        grid-column: 1/6;
+      }
+      aside {
+        grid-row: 3/6;
+        grid-column: 1/2;
+      }
+      main {
+        grid-row: 3/6;
+        grid-column: 2/6;
+      }
+      footer {
+        grid-column: 1/6;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>Header</header>
+      <nav>Navbar</nav>
+      <aside>Aside</aside>
+      <main>main</main>
+      <footer>footer</footer>
+    </div>
+  </body>
+</html>

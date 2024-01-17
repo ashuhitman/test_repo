@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .table-container {
+        background-color: #2c3e50;
+        color: white;
+        width: fit-content;
+        padding: 20px;
+        padding-top: 4px;
+        text-align: center;
+        margin: auto;
+      }
+
+      table {
+        border: 1px solid white;
+        margin: auto;
+        text-align: auto;
+      }
+      table td,
+      th {
+        border: 1px solid white;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="table-container">
+      <h2>Student Information</h2>
+      <table>
+        <thead>
+          <tr>
+            <th rowspan="6">Info</th>
+            <th rowspan="2">Name</th>
+            <th colspan="2">Address</th>
+          </tr>
+          <tr>
+            <th>City</th>
+            <th>House</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>A</td>
+            <td>Delhi</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>B</td>
+            <td>Mumbai</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>C</td>
+            <td>Kolkata</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>D</td>
+            <td>Pune</td>
+            <td>4</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th rowspan="2">Header 1</th>
+          <th>Header 2</th>
+        </tr>
+        <tr>
+          <th>Header 3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td rowspan="2">Data 1</td>
+          <td>Data 2</td>
+        </tr>
+        <tr>
+          <td>Data 3</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

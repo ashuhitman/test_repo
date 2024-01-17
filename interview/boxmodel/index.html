@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modal</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      #btn {
+        display: inline-block;
+        background-color: green;
+        padding: 8px 10px;
+
+        vertical-align: middle;
+        margin: 20px auto;
+        cursor: pointer;
+        color: white;
+        border: none;
+        transition: transform 100ms linear;
+      }
+      #btn:hover {
+        transition: transform 300ms linear;
+        transform: translateY(-20%);
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      }
+
+      .modal {
+        display: none;
+        z-index: 20;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+      .modal[open] {
+        display: block;
+      }
+      .modal[open] .modal-content {
+        animation: slidein 0.4s ease-in-out;
+      }
+      .modal[close] .modal-content {
+        animation: slideout 0.4s ease-in-out;
+      }
+      .modal-content {
+        width: min(400px, 90%);
+        background-color: white;
+        border-radius: 4px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 40px;
+      }
+      @keyframes slidein {
+        0% {
+          margin-top: -30px;
+        }
+        100% {
+          margin-top: 40px;
+        }
+      }
+      @keyframes slideout {
+        0% {
+          margin-top: 40px;
+        }
+        100% {
+          margin-top: -30px;
+        }
+      }
+      @keyframes fadeout {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: gray;
+        opacity: 0.8;
+        z-index: -1;
+      }
+      .title {
+        padding: 12px 10px;
+      }
+      .body {
+        padding: 19px 10px;
+      }
+      .footer {
+        padding: 10px;
+        text-align: end;
+      }
+      .footer button {
+        padding: 8px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      .footer button:first-child {
+        background-color: gray;
+      }
+      .footer button:last-child {
+        background-color: rgb(53, 53, 210);
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <button id="btn">Show Modal</button>
+      <div class="modal">
+        <div class="overlay"></div>
+        <div class="modal-content">
+          <div class="title"><h2>Modal title</h2></div>
+          <hr />
+          <div class="body">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius, eos
+            corrupti nulla soluta ut quia inventore deserunt ullam ipsum
+            obcaecati non ea alias cumque!
+          </div>
+          <hr />
+          <div class="footer">
+            <button id="close">Close</button>
+            <button>Save Changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

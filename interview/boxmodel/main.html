@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .model {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: gray;
+      }
+
+      .model-content {
+        width: min(400px, 90%);
+        margin: 0 auto;
+        background-color: white;
+        border-radius: 4px;
+        animation: slidein 0.5s ease-in-out;
+        margin-top: 20px;
+      }
+      @keyframes slidein {
+        0% {
+          margin-top: -50px;
+        }
+        80% {
+          margin-top: 30px;
+        }
+        100% {
+          margin-top: 20px;
+        }
+      }
+
+      .model-content > div {
+        padding: 8px;
+      }
+      .footer {
+        text-align: end;
+      }
+      button {
+        border: none;
+        padding: 6px;
+        border-radius: 4px;
+      }
+      .footer button:last-child {
+        background-color: rgb(20, 20, 132);
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="model">
+      <div class="model-content">
+        <div class="header">
+          <h2>Model Title</h2>
+        </div>
+        <hr />
+        <div class="body">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam
+          sapiente debitis commodi eaque corrupti asperiores ipsa, mollitia
+          autem molestias ut ad voluptatem doloribus.
+        </div>
+        <hr />
+        <div class="footer">
+          <button>Close</button>
+          <button>Save Changes</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

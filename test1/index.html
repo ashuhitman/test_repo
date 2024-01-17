@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+      }
+      header {
+        background-color: lightblue;
+        padding: 8px 8px;
+      }
+      nav {
+        display: flex;
+        justify-content: space-between;
+      }
+      ul {
+        list-style: none;
+        display: flex;
+      }
+      li {
+        margin-right: 8px;
+      }
+      a {
+        text-decoration: none;
+        position: relative;
+        left: 0;
+        transition: all 0.1s linear;
+      }
+      a:hover {
+        left: 4px;
+      }
+      main {
+        padding: 8px;
+      }
+      #Contact,
+      #About {
+        display: none;
+      }
+      header:has(a:hover) + main div {
+        display: none;
+        opacity: 0;
+        transition: all 0.2s ease-in-out;
+      }
+      header:has(#home:hover) + main #Home,
+      header:has(#contact:hover) + main #Contact,
+      header:has(#about:hover) + main #About {
+        display: block;
+        opacity: 1;
+      }
+      footer {
+        padding: 8px 6px;
+        background-color: lightblue;
+        margin-top: auto;
+        font-size: 0.8em;
+        text-align: center;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <nav>
+          <ul>
+            <li><a id="home" href="/">Home</a></li>
+          </ul>
+          <ul>
+            <li><a id="contact" href="#">Contact</a></li>
+            <li><a id="about" href="#">About Us</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <div id="Home">
+          <h1>Home</h1>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga
+            quidem reprehenderit adipisci!lorem12
+          </p>
+        </div>
+        <div id="Contact">
+          <h1>Contact</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Blanditiis, maxime similique.
+          </p>
+        </div>
+        <div id="About">
+          <h1>About Us</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis,
+            nemo.
+          </p>
+        </div>
+      </main>
+      <footer>Copyright©2024: Designed by Ashutosh Singh</footer>
+    </div>
+  </body>
+</html>
